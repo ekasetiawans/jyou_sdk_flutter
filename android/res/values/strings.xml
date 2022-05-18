@@ -1,0 +1,55 @@
+ <resources>
+        <string name="app_name">JYSDK</string>
+        <string name="bind">Bind service</string>
+        <string name="unbind">Unbind service</string>
+        <string name="scan">scan</string>
+        <string name="connect">connect</string>
+        <string name="disconnect">Disconnect</string>
+        <string name="send_call_notificatioin">Send reminder</string>
+        <string name="sync_time">Get current motion data</string>
+        <string name="set_time">Set device time</string>
+        <string name="set_parameters">Set device parameters</string>
+        <string name="set_userinfo">Set personal info</string>
+        <string name="set_vir">Bracelet vibration</string>
+
+        <string name="set_photo">Photo mode</string>
+        <string name="set_idletime">Sedentary reminder time</string>
+        <string name="set_sleep">Set sleep period</string>
+        <string name="read_batery">Read device battery</string>
+        <string name="read_deviceinfo">Read bracelet information</string>
+        <string name="set_alarm">Set alarm</string>
+        <string name="send_msg">Firmware upgrade</string>
+        <string name="openheart">Open heart rate test</string>
+        <string name="closeheart">Close heart rate test</string>
+        <string name="set_autoheart">Auto test heart rate</string>
+        <string name="set_fuzhu">Special Mode</string>
+        <string name="set_showmode">Set display mode</string>
+        <string name="getdata">Get historical data</string>
+        <string name="set_device_code">Set device string code</string>
+        <string name="get_device_code">Get device string code</string>
+
+        <string name="set_heart_range">Set heart rate zone</string>
+        <string name="get_band_function">Get band function</string>
+        <string name="set_uuid">Switch default handling</string>
+
+        <string name="ecg_open">Open ECG</string>
+        <string name="ecg_close">Close ECG</string>
+        <string name="ecg_playback">ECG playback</string>
+        <string name="ecg_report">ECG report</string>
+        <string name="ecg_sync">Sync ECG</string>
+        <string name="ecg_test">Test ECG</string>
+        <string name="set_name">Change name</string>
+        <string name="get_rssi">Get Signal</string>
+
+        <string name="ecg_auto">Auto Test</string>
+        <string name="ecg_auto_name">Enter the test bracelet name</string>
+        <string name="ecg_heart">heart rate</string>
+        <string name="ecg_band">Bracelet</string>
+        <string name="ecg_chest">chest stickers</string>
+
+        <string name="set_reminder_time">Set reminder time</string>
+        <string name="set_reminder_text">Set reminder content</string>
+
+        <string name="set_bp_adjust">Set blood pressure calibration</string>
+        <string name="set_todo">pending</string>
+</resources>

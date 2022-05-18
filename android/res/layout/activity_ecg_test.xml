@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ecg.EcgTestActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:id="@+id/sDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="0dp"
+            android:textOn="@string/ecg_chest"
+            android:textOff="@string/ecg_band" />
+
+        <Button
+            android:id="@+id/bOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_open"
+            android:onClick="openEcg"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_close"
+            android:onClick="closeEcg"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_playback"
+            android:onClick="backEcg"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white">
+        <com.sxr.sdk.ble.keepfit.ecg.EcgGrid
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.sxr.sdk.ble.keepfit.ecg.EcgView
+            android:id="@+id/evTest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ecg_auto_name"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_auto"
+            android:onClick="autoPlay"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_heart"/>
+        <TextView
+            android:id="@+id/tvHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="--"
+            android:textColor="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_report"
+            android:onClick="reportEcg"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white">
+        <com.sxr.sdk.ble.keepfit.ecg.EcgGrid
+            android:id="@+id/egBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:grid_color_small="#ffccdd"
+            app:grid_color_middle="#d4616e"
+            app:grid_color_large="#990000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.sxr.sdk.ble.keepfit.ecg.EcgView
+                android:id="@+id/evTest0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:line_color="@android:color/black"
+                app:line_width="1dp"
+                app:line_color_scan="@android:color/transparent"/>
+            <com.sxr.sdk.ble.keepfit.ecg.EcgView
+                android:id="@+id/evTest1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:line_color="@android:color/black"
+                app:line_width="1dp"
+                app:line_color_scan="@android:color/transparent"/>
+            <com.sxr.sdk.ble.keepfit.ecg.EcgView
+                android:id="@+id/evTest2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:line_color="@android:color/black"
+                app:line_width="1dp"
+                app:line_color_scan="@android:color/transparent"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,5 +1,8 @@
 package id.kakzaki.jyou_sdk;
 
+import android.content.Intent;
+import android.os.Binder;
+import android.os.IBinder;
 import android.util.Log;
 
 import com.sxr.sdk.ble.keepfit.service.BluetoothLeService;

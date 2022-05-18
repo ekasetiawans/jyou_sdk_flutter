@@ -130,6 +130,7 @@ public class JyouSdkPlugin implements FlutterPlugin, ActivityAware,MethodCallHan
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
       Log.i("info","onServiceConnected ddd");
+
       mService = IRemoteService.Stub.asInterface(service);
       try {
         mService.registerCallback(mServiceCallback);
@@ -1262,9 +1263,8 @@ public class JyouSdkPlugin implements FlutterPlugin, ActivityAware,MethodCallHan
     switch (call.method) {
       case "bind":
         try {
-          Intent intent = new Intent(mcontext,IRemoteService.class);
-          intent.setClassName("id.kakzaki.jyou_sdk", "id.kakzaki.jyou_sdk.SampleBleService");
-          boolean val =mcontext.bindService(intent, mServiceConnection, Service.BIND_AUTO_CREATE);
+          Intent intent = new Intent(mactivity, SampleBleService.class);
+          boolean val = mactivity.bindService(intent, mServiceConnection, Service.BIND_AUTO_CREATE);
           mIsBound = true;
           Log.i("info", "bindService "+val +" "+intent);
         } catch (Exception e) {
